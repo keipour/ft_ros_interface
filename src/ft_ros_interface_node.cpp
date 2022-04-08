@@ -46,7 +46,7 @@ int main(int argc, char **argv) {
     // --- Assemble & publish the message ---
     geometry_msgs::WrenchStamped msg_wrench;
     msg_wrench.header.stamp = ros::Time::now();
-    msg_wrench.header.frame_id = "base_link";
+    msg_wrench.header.frame_id = "ft_sensor";
     msg_wrench.wrench.force.x = message_dp[0] / 1e3f;
     msg_wrench.wrench.force.y = message_dp[1] / 1e3f;
     msg_wrench.wrench.force.z = message_dp[2] / 1e3f;
